@@ -1,0 +1,215 @@
+
+
+var v1 = $(this).find('.tdclass1').text();
+ 
+      var dateObj = new Date();
+      var month = dateObj.getUTCMonth() + 1; //months from 1-12
+      var day = dateObj.getUTCDate();
+      var year = dateObj.getUTCFullYear();
+      newdate = year + "-" + month + "-" + day;
+ 
+      var dateObj1 = new Date(v1);
+      var month = dateObj1.getUTCMonth() + 1; //months from 1-12
+      var day = dateObj1.getUTCDate();
+      var year = dateObj1.getUTCFullYear();
+      newdate1 = year + "-" + month + "-" + day;
+
+        var exdate = dateObj - dateObj1; 
+
+
+
+
+https://www.codeofaninja.com/2013/03/php-login-script.html
+   var str1= v1.split('/');
+  var str2= today.split('/');
+
+  //                yyyy   , mm       , dd
+  var t1 = new Date(str1[2], str1[0]-1, str1[1]);
+  var t2 = new Date(str2[2], str2[0]-1, str2[1]);
+
+  var diffMS = t1 - t2;    
+  console.log(diffMS + ' ms');
+
+  var diffS = diffMS / 1000;    
+  console.log(diffS + ' ');
+
+  var diffM = diffS / 60;
+  console.log(diffM + ' minutes');
+
+  var diffH = diffM / 60;
+  console.log(diffH + ' hours');
+
+  var diffD = diffH / 24;
+  console.log(diffD + ' days');
+  alert(diffD);
+
+
+  var date_diff_indays = function(date1, date2) 
+{
+dt1 = new Date(date1);
+dt2 = new Date(date2);
+return Math.floor((Date.UTC(dt2.getFullYear(), dt2.getMonth(), dt2.getDate()) - Date.UTC(dt1.getFullYear(), dt1.getMonth(), dt1.getDate()) ) /(1000 * 60 * 60 * 24));
+}
+
+  $('tr').click(function(){
+    var v1 = $(this).find('.tdclass1').text();
+    var today = new Date();
+
+
+
+<!-- END PAGE SOURCE 
+  echo "<td> <div class='brighten pic'>
+<a href='./Customer.php?var=$PkId' onclick='return gotoNode($newformat)'> <img src= $row[Pictures] width=200 height=150 ></a>
+  </div> </td>";
+                       <input type="hidden" name="id" value="<=$row['eid']?>">
+                            and on button click perform query like
+                             
+  /*
+
+  var dateObj = new Date(v1);
+var month = dateObj.getUTCMonth() + 1; //months from 1-12
+var day = dateObj.getUTCDate();
+var year = dateObj.getUTCFullYear();
+
+newdate = year + "/" + month + "/" + day;
+
+    var dateOne = new Date(v1);
+
+    alert(v1);
+
+
+
+  $('#data-table').on('click', 'tr', function() {
+    var values = $(this).find('td').map(function() {
+        return $(this).text();
+    });
+
+    alert(values[0]); // first td
+    alert(values[1]); // second td
+    alert(values[2]); // third td
+    alert(values[3]); // fourth td
+});
+
+  var cells = document.getElementsByTagName('td');
+for(var i = 0; i <= cells.length; i++){
+    cells[i].addEventListener('click', clickHandler);
+}
+
+function clickHandler()
+{
+    alert(this.textContent);
+}
+*/
+ // var elements  = document.getElementsByTagName('td');
+//alert(elements);
+/*
+var t = document.getElementById("myform");
+for (var r = 0; r < t.rows.length; r++) {
+    for (var c = 0; c < t.rows[r].cells.length; c++) {
+        alert(t.rows[r].cells[c].innerHTML)
+    }
+}
+ */ 
+   //document.getElementById('one').onclick=function(){
+     //alert(tdate1);
+    
+    
+
+
+
+/*
+$("#open").on('click',function(){
+ 
+ var arrData=[];
+ // loop over each table row (tr)
+ $("#myform tr").each(function(){
+      var currentRow=$(this);
+  
+      var col1_value=currentRow.find("td:eq(0)").text();
+      var col2_value=currentRow.find("td:eq(1)").text();
+      var col3_value=currentRow.find("td:eq(2)").text();
+alert(col1_value);
+       var obj={};
+      obj.col1=col1_value;
+      obj.col2=col2_value;
+      obj.col3=col3_value;
+
+      arrData.push(obj);
+ });
+  alert(arrData);
+  console.log(arrData);
+
+});
+
+
+function gotoNode() {
+  $('#open').click(function() {
+    var col1=currentRow.find("td:eq(0)").text(); 
+        alert('omg!');
+    });
+
+    return false;
+
+}
+
+ */   /*
+
+
+
+    /* open new window with href
+function Handler(self, e) {
+    e.preventDefault();
+    var href = $(self).attr("href");
+    window.open(href);
+    return false;
+  echo "<td> <div class='brighten pic'>
+<a href='./Customer.php?var=$PkId' onclick='return Handler(this, event)'> <img src= $row[Pictures] width=200 height=150 ></a>
+  </div> </td>";
+
+}
+
+
+
+*/
+/*
+     /* window.onload = function() 
+      {
+   var getInput = prompt("Hey type something here: ");
+   localStorage.setItem("storageName",getInput);
+}*/
+    
+
+  /*  
+document.getElementById('ldis').onclick = function() 
+{
+    alert("ddd");
+  document.getElementById('ldis').disabled = true;
+ // document.getElementById("my_image").src='the_path_to_another_image';
+};
+
+DIV PASSING PARAMENT TO FUNCTION
+
+function showDiv(Div) {
+    var x = document.getElementById(Div);
+    if(x.style.display=="none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
+<div id="welcomeDiv" style="display:none;" class="answer_list">WELCOME</div>
+<input type="button" name="answer" value="Show Div" onclick="showDiv('welcomeDiv')" />
+
+
+
+
+*/
+//$("#errorid").hide();
+
+//$('.text_container').css("display", "none");
+
+$id=$_POST['id'];
+select * from table_name where id='$id';
+
+-->

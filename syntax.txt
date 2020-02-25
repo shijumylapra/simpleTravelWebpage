@@ -1,0 +1,81 @@
+In processlogin.php,
+        if(!$_POST["username"] || !$_POST["password"])
+            {
+                $msg = "You left one or more of the required fields.";
+                $msgEncoded = base64_encode($msg);
+                header("location:login.php?msg=".$msgEncoded);
+            }
+
+in login.php file,
+          $msg = base64_decode($_GET['msg']);
+            if(isset($_GET['msg'])){
+
+                if($msg!=""){
+                    echo $msg;
+                }
+            }
+
+
+
+
+<?php
+
+session_start();
+
+if(isset($_POST['login'])){
+
+$username = $_POST['username'];
+
+$password = $_POST['password'];
+
+if ($username == "me" && $password == "you" ) {
+
+$_SESSION['Login_user'] = $username;
+
+header('location: access.php');
+
+} else{
+
+$errorMsg ="invalid username and password";
+
+}
+
+}
+
+?>
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Login form</title>
+
+</head>
+
+<body>
+
+<?php
+
+$errorMsg = "invald username and password";
+
+?>
+
+<h1>Login form</h1>
+
+<form action='login.php' method='post'>
+
+Username: <input type='text' name='username' /><br />
+
+Password: <input type='password' name='password' /><br /><br />
+
+<label>Remember me:<input type="checkbox" name="remember me " id = "remember me" value="remember"></label></br>
+
+<input type='submit' name = 'login' value='Login' />
+
+</form>
+
+</body>
+
+</html>
